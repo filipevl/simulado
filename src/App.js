@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getQuestions } from "./services";
-import { Card, Container, Row, Title, Type, Image, Ratio, LabelRadio, RadioArea } from "./styled";
+import { Card, Container, Row, Title, Type, Image, Ratio, LabelRadio, RadioArea, Header, HeaderTitle, HeaderContent, LoadButton, Deascription } from "./styled";
+import './index.css'
 
 function App() {
   const [questions, setQuestion] = useState([]);
@@ -26,8 +27,13 @@ function App() {
 
   return (
     <Container>
-      <button onClick={handleClick}>Carregar mais questões</button>
-      <p>Quantidade de perguntas: {questions.length}</p>
+      <Header>
+        <HeaderTitle>Simulado -  DETRAN BAHIA</HeaderTitle>
+        <HeaderContent>
+          <LoadButton onClick={handleClick}>Carregar mais questões</LoadButton>
+          <Deascription>Total de perguntas: {questions.length}</Deascription>
+        </HeaderContent>
+      </Header>
       <Row>
         {questions.length &&
           questions.map(
@@ -54,8 +60,12 @@ function App() {
             )
           )}
       </Row>
-      <button onClick={handleClick}>Carregar mais questões</button>
-      <p>Quantidade de perguntas: {questions.length}</p>
+      <Header>
+        <HeaderContent>
+          <LoadButton onClick={handleClick}>Carregar mais questões</LoadButton>
+          <Deascription>Total de perguntas: {questions.length}</Deascription>
+        </HeaderContent>
+      </Header>
     </Container>
   );
 }
