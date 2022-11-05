@@ -9,7 +9,7 @@ export const Row = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 500px;
+  width: 90%;
   margin: 16px 0px;
   padding: 16px 8px;
   border: 2px solid;
@@ -23,14 +23,14 @@ export const Title = styled.h1`
 `;
 
 export const Type = styled.p`
-font-size: 8px;
-    align-self: end;
-    font-weight: bold;
-    color: #a9dd44;
-    `;
+  font-size: 8px;
+  align-self: end;
+  font-weight: bold;
+  color: #a9dd44;
+`;
 
 export const Image = styled.img`
-margin-bottom: 16px;
+  margin-bottom: 16px;
 `;
 
 export const LabelRadio = styled.label``;
